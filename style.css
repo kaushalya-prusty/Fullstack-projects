@@ -6,16 +6,16 @@ body {
   font-family: "Segoe UI", sans-serif;
   box-sizing: border-box;
 }
+/* header section  */ /*   */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
 .portfolio {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   font-style: italic;
 }
@@ -25,42 +25,106 @@ header {
 .nav-links {
   display: none;
   flex-direction: column;
-  list-style: none;
+  z-index: 1000;
   gap: 1rem;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  transition: all 0.3s ease;
+}
+.nav-links.show {
+  display: flex;
 }
 .nav-links li {
+  list-style: none;
 }
 .nav-links li a {
   color: white;
   padding: 0.5rem;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
 }
 .menu-toggle {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
 }
+/* Hero section  */
+.home {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 1rem;
+}
+
+.name {
+  color: #0ff;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.icons {
+  padding: 1rem;
+  color: #0ff;
+}
+.icons a {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 2px solid #0ff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.project-btn {
+  margin-left: 5rem;
+  margin-top: 2rem;
+}
+.btn-project {
+  padding: 0.5rem 3rem;
+  color: black;
+  background-color: rgba(255, 255, 0, 0.937);
+  border-radius: 11px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/*About me section   */
+.about-sec {
+  background-color: white;
+}
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: static;
+  }
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+  header {
+    margin: 0.2rem 5rem 0 5rem;
   }
   .menu-toggle {
     display: none;
   }
-}
+  .home {
+    font-size: 2rem;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .project-btn {
+    margin-left: 8rem;
+  }
+  .btn-project {
+    padding: 0.5rem 3rem;
 
-.home {
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-}
-.intro {
-  font-weight: bolder;
-}
-.name {
-  color: #0ff;
+    border-radius: 11px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }

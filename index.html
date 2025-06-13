@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Protfolio</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <header>
@@ -20,16 +24,22 @@
       </nav>
     </header>
     <section class="home">
-      <div>
-        <div class="intro">
-          Hello, I am <span class="name">KAUSALYA PRUSTY</span>
-        </div>
+      <div class="hero">
+        <div class="intro">Hello, I am</div>
+        <div class="name">KAUSALYA PRUSTY</div>
         <div class="tagline">Frontend Developer | AWS Cloud Practitioner</div>
         <div>Learning Backend & DevOps</div>
+        <div class="icons">
+          <a class="bi bi-envelope-open-fill"></a>
+          <a class="bi bi-github"></a>
+          <a class="bi bi-linkedin"></a>
+        </div>
+        <div class="project-btn">
+          <button class="btn-project">Projects</button>
+        </div>
       </div>
-      <div><img width="50%" src="" /></div>
     </section>
-    <section>
+    <section class="about-sec">
       <div>
         <h1>About me</h1>
         <div>
@@ -61,8 +71,7 @@
       const toggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
       toggle.addEventListener("click", () => {
-        navLinks.style.display =
-          navLinks.style.display === "flex" ? "none" : "flex";
+        navLinks.classList.toggle("show");
       });
     </script>
   </body>
